@@ -1,7 +1,11 @@
 # Iris-Classifier
 Machine learning Solution based on the Flask web framework that implements a classification model of the Iris dataset
 
+This machine learning solution was trained on a datasets of Iris plant classes (Iris Setosa, Iris Versicolour, Iris Virginica) and flower features( 1. sepal length in cm, sepal width in cm , petal length in cm, petal width in cm ) in order to predict future un-seen iris plant 
+
+
 #Flask
+This project was built using Python's Flask Framework
 Flask is a Python web framework built with a small core and easy-to-extend philosophy.
 Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit. The documentation for these libraries can be found at:
 
