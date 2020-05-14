@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Iris Predictor</h1>
+    </div>
+
+    <div class="container">
+
+    <form method="POST" action="">
+        <div class="form-group">
+
+<h3><label>Sepal Length</label></h3>
+            <div class="d-flex my-4">
+  <div class="w-75">
+      <input type="range" class="custom-range" id="rangeInput" min="0" max="10" step="0.1" name="sepal_length" class="form-control" oninput="amount.value=rangeInput.value" value={{request.form.sepal_length}}>
+      <input id="amount" class="form-control" type="number" value="{{sepal_length}}" step="0.1" min="0" max="10" oninput="rangeInput.value=amount.value" />
+  </div>
+</div>
+
+
+<h3><label>Sepal Width</label></h3>
+            <div class="d-flex my-4">
+  <div class="w-75">
+      <input type="range" class="custom-range" id="rangeInput1" min="0" max="10" step="0.1" name="sepal_width" class="form-control" oninput="amount1.value=rangeInput1.value" value={{request.form.sepal_width}}>
+      <input id="amount1" class="form-control" type="number" value="{{sepal_width}}" step="0.1" min="0" max="10" oninput="rangeInput1.value=amount1.value" />
+  </div>
+</div>
+
+<h3><label>Petal Length</label></h3>
+            <div class="d-flex my-4">
+  <div class="w-75">
+      <input type="range" class="custom-range" id="rangeInput2" min="0" max="10" step="0.1" name="petal_length" class="form-control" oninput="amount2.value=rangeInput2.value" value={{request.form.petal_length}}>
+      <input id="amount2" class="form-control" type="number" value="{{petal_length}}" step="0.1" min="0" max="10" oninput="rangeInput2.value=amount2.value" />
+  </div>
+</div>
+
+<h3><label>Petal Width</label></h3>
+            <div class="d-flex my-4">
+  <div class="w-75">
+      <input type="range" class="custom-range" id="rangeInput3" min="0" max="10" step="0.1" name="petal_width" class="form-control" oninput="amount3.value=rangeInput3.value" value={{request.form.petal_width}}>
+      <input id="amount3" class="form-control" type="number" value="{{petal_width}}" step="0.1" min="0" max="10" oninput="rangeInput3.value=amount3.value" />
+  </div>
+</div>
+        <p><input type="submit" class="btn btn-primary" value="Submit"> </p>
+    </form>
+
+    </div>
+            <div class="jumbotron text-center">
+                <h2><i>IRIS CLASS</i><br></h2>
+                <h4>{{result}}</h4>
+    </div>
+
+
+    <h3>
+    <div class="col-lg-4 themed-grid-col">Sepal Length : {{sepal_length}}</div>
+    <div class="col-lg-4 themed-grid-col">Sepal Width : {{sepal_width}}</div>
+    <div class="col-lg-4 themed-grid-col">Petal Length : {{petal_length}}</div>
+    <div class="col-lg-4 themed-grid-col">Petal Width : {{petal_width}}</div>
+    </h3>
+
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1>Dashboard, <small>{{session.username}}</small></h1>
+    </div>
+<div class="container">
+    <a class="btn btn-success" href="/add_article">Add Article</a>
+    <a class="btn btn-success" href="/iris_predictor">Iris Predictor</a>
+<hr>
+</div>
+{% endblock %}
